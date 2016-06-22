@@ -6,7 +6,7 @@
   "description": "self dependent login module",
   "main": [
   "./css/login.css",
-  "./login-module-config.js"],
+  "./release/login-module-config.js"],
   "keywords": [
     "login"
   ],

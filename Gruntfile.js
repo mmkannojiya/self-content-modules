@@ -33,7 +33,7 @@ module.exports = function(grunt) {
     },
     dist: {
       src: ['login-module-config.js','templatesjs/templates.js'],
-      dest: 'login-module-config.js'
+      dest: 'release/login-module-config.js'
     },
   },
 
