@@ -1,4 +1,4 @@
-angular.module('myTmoApp.loginModule',['ui.router','loginTemplates']);
+angular.module('myTmoApp.loginModule',['ui.router']);
 angular.module('myTmoApp.loginModule').config(function ($stateProvider ,$locationProvider, $urlRouterProvider) {
   //$urlRouterProvider.otherwise("/");
   $locationProvider.html5Mode(true).hashPrefix('!');
