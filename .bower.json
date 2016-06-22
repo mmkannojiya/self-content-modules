@@ -1,0 +1,33 @@
+{
+  "name": "login-module-bower",
+  "authors": [
+    "Madanmohan Kannojiya <madanmohan.kannojiya@T-Mobile.com>"
+  ],
+  "description": "self dependent login module",
+  "main": "./login-module-config.js",
+  "keywords": [
+    "login"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/mmkannojiya/self-content-modules",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.7",
+    "angular-ui-router": "^0.3.1"
+  },
+  "_release": "a3a0744824",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "a3a07448248a9ca59661131049e04b7e305d05d2"
+  },
+  "_source": "https://github.com/mmkannojiya/self-content-modules.git",
+  "_target": "*",
+  "_originalSource": "login-module-bower"
+}

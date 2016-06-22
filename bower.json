@@ -4,7 +4,9 @@
     "Madanmohan Kannojiya <madanmohan.kannojiya@T-Mobile.com>"
   ],
   "description": "self dependent login module",
-  "main": "./login-module-config.js",
+  "main": [
+  "./css/login.css",
+  "./login-module-config.js"],
   "keywords": [
     "login"
   ],
@@ -19,6 +21,8 @@
   ],
   "dependencies": {
     "angular": "^1.5.7",
-    "angular-ui-router": "^0.3.1"
+    "angular-ui-router": "^0.3.1",
+	"angular-bootstrap": "^1.3.3",
+	"bootstrap": "^3.3.6"
   }
 }

@@ -1,11 +1,11 @@
-angular.module('myTmoApp.loginModule',['ui.router']);
+angular.module('myTmoApp.loginModule',['ui.router','templates/login-partial.html']);
 angular.module('myTmoApp.loginModule').config(function ($stateProvider ,$locationProvider, $urlRouterProvider) {
   //$urlRouterProvider.otherwise("/");
   $locationProvider.html5Mode(true).hashPrefix('!');
   $stateProvider
       .state('login', {
         url: '/login',
-		template:'<h1>Hey There</h1>'
+		templateUrl:'templates/login-partial.html'
       });
 
   }).constant('LOGIN_CONST', {
@@ -19,3 +19,8 @@ angular.module('myTmoApp.loginModule').config(function ($stateProvider ,$locatio
     'LOGGEDIN_STATE_PARAMS': 'loggedinStateParams',
     //E2E Fix Start - QC28265, QC28380- Switch Accounts Link missing
 	'SET_MULTIPLE_ACCOUNTS_EVENT': 'setMultipleAccounts'});
+	
+angular.module("templates/login-partial.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("templates/login-partial.html",
+    "<div>it's a templates cache</div>");
+}]);
