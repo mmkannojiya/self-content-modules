@@ -17,7 +17,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 	  ngtemplates: {
 		options: {
-			module: 'loginTemplates',
+			module: 'myTmoApp.loginModule',
 		},
 		dist: {
 			src: [
