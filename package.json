@@ -1,0 +1,24 @@
+{
+  "name": "login-module-demo",
+  "version": "1.0.0",
+  "description": "for grunt-angular-template and grunt-contrib-concat",
+  "main": "login-module-config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmkannojiya/self-content-modules.git"
+  },
+  "author": "madanmohankannojiya@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mmkannojiya/self-content-modules/issues"
+  },
+  "homepage": "https://github.com/mmkannojiya/self-content-modules#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-angular-templates": "^1.0.4",
+    "grunt-contrib-concat": "^1.0.1"
+  }
+}
