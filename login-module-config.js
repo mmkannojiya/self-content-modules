@@ -5,17 +5,45 @@ angular.module('myTmoApp.loginModule').config(function ($stateProvider ,$locatio
   $stateProvider
       .state('login', {
         url: '/login',
-		templateUrl:'templates/login-partial.html'
+		templateUrl:'templates/login-partial.html',
+		controller:'loginController'
       });
 
   }).constant('LOGIN_CONST', {
-    'LOGIN': '/auth',
-    'AUTHLOGINDATA': 'authlogindata',
-    'DOUBLESLASH': '://',
-    'CLIENT_CREDENTIALS': 'client_credentials',
-    'ENTER_MSISDN': 'Enter a value for MSISDN',
-    'ENETR_EMAIL': 'Enter a value for email',
-    'LOGGEDIN_STATE': 'loggedinState',
-    'LOGGEDIN_STATE_PARAMS': 'loggedinStateParams',
-    //E2E Fix Start - QC28265, QC28380- Switch Accounts Link missing
-	'SET_MULTIPLE_ACCOUNTS_EVENT': 'setMultipleAccounts'});
+    'API_ENDPOINT':'http://localhost:9000',
+	'LOGIN_URL' : '/validateUser',
+	'NEXT_STATE':''
+	
+	});
+angular.module('myTmoApp.loginModule').controller('loginController',function($scope, loginService, $state, LOGIN_CONST){
+	
+	$scope.username = '' ;
+	$scope.submitUsername = function(){
+		
+		loginService.validateUser($scope.username).then(function(data){
+			if(data.result === 'success'){
+				
+				$state.go(LOGIN_CONST.NEXT_STATE);
+			}
+			
+		});
+		
+	}
+});
+angular.module('myTmoApp.loginModule').service('loginService',function($q, $http, LOGIN_CONST){
+	
+	this.validateUser = function(username){
+		var defered = $q.defer();
+		$http.get(LOGIN_CONST.API_ENDPOINT+LOGIN_CONST.LOGIN_URL+'?username='+username).then(function(response){
+		
+			defered.resolve(response);
+		
+		},function(error){
+		
+		defered.reject(error);
+	})
+		return defered.promise;
+	}
+	
+	
+})

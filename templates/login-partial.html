@@ -7,7 +7,7 @@
                             <label for="inputUsername" class="control-label col-xs-4">Username</label>
                             <div class="col-xs-6">
                                 
-                                <input type="Text" class="form-control" placeholder="Username" required>
+                                <input type="Text" class="form-control" ng-model="username" placeholder="Username" required>
                             </div>
                         </div>
 
@@ -18,7 +18,7 @@
                             </div>
                         </div>
                         <center>
-                          <button type="submit" class="btn btn-success btn-login btn-lg" name="login">Login</button>
+                          <button type="button" class="btn btn-success btn-login btn-lg" ng-click ="submitUsername()" name="login">Login</button>
                           </center> 
                     </form>
 </div>                    
