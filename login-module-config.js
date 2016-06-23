@@ -20,10 +20,18 @@ angular.module('myTmoApp.loginModule').controller('loginController',function($sc
 	$scope.username = '' ;
 	$scope.submitUsername = function(){
 		
-		loginService.validateUser($scope.username).then(function(data){
-			if(data.result === 'success'){
+		loginService.validateUser($scope.username).then(function(response){
+			if(response.data.result === 'success'){
+				if(LOGIN_CONST.NEXT_STATE != ''){
 				
 				$state.go(LOGIN_CONST.NEXT_STATE);
+				sessionStorage.setItem('username',$scope.username);
+				}else{
+					console.error('Login Module : No next state is defined');
+				}
+			}else{
+				
+				window.alert('Invalid User');
 			}
 			
 		});
