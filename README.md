@@ -35,6 +35,7 @@ API_ENDPOINT : sets api end point (eg.'http://localhost:9000')
 LOGIN_URL: sets api name (eg. '/validateUser')
 
 NEXT_STATE: sets next state after login
+
 to override these constant you have to inject 'LOGIN_CONST' in your 'config', 'controller' or 'service' and assign new value
 		
 >
