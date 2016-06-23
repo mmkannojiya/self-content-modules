@@ -54,7 +54,7 @@ angular.module('myTmoApp.loginModule').service('loginService',function($q, $http
 	}
 	
 	
-})angular.module('myTmoApp.loginModule').run(['$templateCache', function($templateCache) {
+});angular.module('myTmoApp.loginModule').run(['$templateCache', function($templateCache) {
   'use strict';
 
   $templateCache.put('templates/login-partial.html',

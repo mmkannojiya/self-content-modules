@@ -54,4 +54,4 @@ angular.module('myTmoApp.loginModule').service('loginService',function($q, $http
 	}
 	
 	
-})
+});
