@@ -4,6 +4,7 @@
     "Madanmohan Kannojiya <madanmohan.kannojiya@T-Mobile.com>"
   ],
   "description": "self dependent login module",
+  "version": "1.1.1",
   "main": [
   "./css/login.css",
   "./release/login-module-config.js"],
