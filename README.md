@@ -4,12 +4,13 @@ It provides basic login templates with basic angular application setup.
 
 #Installation
 
-run command 'bower install --save login-module-bower'
+run command `bower install --save login-module-bower`
 
 #How to use
 
 **(1)** include 'myTmoApp.loginModule' module in your main angular module
 		eg. 
+		>
 		```javascript
 		angular.module('myTmoApp',['myTmoApp.loginModule']);
 		```
@@ -30,6 +31,7 @@ run command 'bower install --save login-module-bower'
 		NEXT_STATE: sets next state after login
 		
 		to override these constant you have to inject 'LOGIN_CONST' in your 'config', 'controller' or 'service' and assign new value
+		>
 		```javascript
 		LOGIN_CONST.NEXT_STATE  = 'logout'
 		```
@@ -40,6 +42,7 @@ run command 'bower install --save login-module-bower'
 		1. Inject $state as dependency in run method
 		2. Then using $state.get method get your desired state data.
 		3. Modify it by assigning new value
+		>
 		```javascript
 		angular.module('myTmoApp.loginModule')
 		.run(['$state', function($state){
@@ -52,6 +55,7 @@ run command 'bower install --save login-module-bower'
 
 **(3)** Add new states definitions:		
 		You can add new states with definitions as below:
+		>
 		```javascript
 		angular.module('myTmoApp.loginModule').config(function ($stateProvider ,$locationProvider, $urlRouterProvider,LOGIN_CONST) {
 		  $locationProvider.html5Mode(true).hashPrefix('!');
@@ -65,6 +69,7 @@ run command 'bower install --save login-module-bower'
 		```		   
 **(4)** Create new service or controller 
 		You can create new controllers and services of existing module
+		>
 		```javascript
 		angular.module('myTmoApp.loginModule').controller('newController',function(){//some implementation});
 		angular.module('myTmoApp.loginModule').service('newService',function(){//some implementation});
