@@ -45,8 +45,7 @@ run command `bower install --save login-module-bower`
 		
 		
 **(2)** Change states definitions:
-
-		You can also change state configuration like below example:
+		-You can also change state configuration like below example:
 		-1. Inject $state as dependency in run method
 		-2. Then using $state.get method get your desired state data.
 		-3. Modify it by assigning new value
