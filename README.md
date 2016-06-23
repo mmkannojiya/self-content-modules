@@ -71,14 +71,12 @@ angular.module('myTmoApp.loginModule').config(function ($stateProvider ,$locatio
   $stateProvider
 	  .state('page2', {
 		url: '/page2',
-		template:'<h1>Welcome </h1>',
-		
+		template:'<h1>Welcome </h1>',	
 	  });
 	})
 ```
 		
 **(4)** Create new service or controller 
-
 You can create new controllers and services of existing module
 		
 >
